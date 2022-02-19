@@ -1,0 +1,398 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Ubuntu', sans-serif; */
+body {
+  overflow: overlay;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  /* background: rgb(168, 42, 84); */
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 188, 0, 0) 0%,
+    rgba(255, 180, 16, 1) 50%,
+    rgba(255, 215, 0, 1) 100%
+  );
+  border-radius: 40px;
+}
+h1, h2, h3, h4, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* ~~~~~ NAVBAR STYLE ~~~~~ */
+.navbar {
+  background-color: rgb(27, 27, 27);
+  padding: 3% 15% 0%;
+}
+
+.navbar a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+/* ~~~~~ TITLE SECTION STYLE ~~~~~ */
+#title {
+  background-color: #1b1b1b;
+  padding: 3% 15%;
+  line-height: 3;
+}
+
+#title h1 {
+  margin-top: 7rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  background: #fdad01;
+  background-clip: text;
+  background: -webkit-linear-gradient(
+    to bottom right,
+    #fdad01 0%,
+    #ffd700 100%
+  );
+  background: -moz-linear-gradient(to bottom right, #fdad01 0%, #ffd700 100%);
+  background: linear-gradient(to bottom right, #fdad01 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#title p {
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.profilePhotoContainer {
+  display: flex;
+  align-items: center;
+}
+.profile-photo {
+  width: 25rem;
+}
+
+.gear {
+  --fa-animation-duration: 10s;
+  position: relative;
+  top: 0.1rem;
+  right: 1.5px;
+  color: #ffb802;
+  -webkit-text-fill-color: #ffb802;
+}
+
+.wrapper {
+  display: inline-flex;
+  margin-bottom: 3rem;
+}
+
+.wrapper .dynamic-texts {
+  padding: 0%;
+  height: 50px;
+  overflow: hidden;
+  
+}
+.dynamic-texts li{
+  list-style: none;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(3) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -173px;
+  }
+}
+.dynamic-texts li span {
+  position: relative;
+}
+
+.dynamic-texts li span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(27, 27, 27);
+  border-left: 2px solid #ffd700; 
+  top: 1px;
+  left: 0;
+  animation: typing 3s steps(20) infinite;
+}
+
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 5px);
+  }
+  100%{
+    left: 0;
+  }
+}
+/* ~~~~~ BUTTON STYLE ~~~~~ */
+.button {
+  background: linear-gradient(45deg, #ffb802 0%, #ffe82f 100%);
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+  color: rgb(27, 27, 27);
+  margin-right: 2rem;
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.button:hover {
+  background-color: #fab915;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ffee83, transparent);
+  transition: 0.5s;
+}
+.button:hover::before {
+  left: 100%;
+}
+
+/* ~~~~~ ABOUT SECTION STYLE~~~~~ */
+
+#about {
+  padding: 7% 12%;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+}
+
+.about-box {
+  padding: 3rem;
+}
+
+#about h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  color: rgb(46, 46, 46);
+}
+
+#about p {
+  color: rgb(104, 104, 104);
+  line-height: 2;
+}
+
+/* ~~~~~ SKILLS SECTION STYLE~~~~~ */
+
+#skill {
+  padding: 7% 15%;
+  background-color: rgb(27, 27, 27);
+}
+#skill h3 {
+  color: white;
+  text-align: center;
+  background: #fdad01;
+  margin-bottom: 3rem;
+  background-clip: text;
+  background: -webkit-linear-gradient(
+    to bottom right,
+    #fdad01 0%,
+    #ffd700 100%
+  );
+  background: -moz-linear-gradient(to bottom right, #fdad01 0%, #ffd700 100%);
+  background: linear-gradient(to bottom right, #fdad01 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#skill p {
+  color: white;
+  font-size: 1rem;
+}
+
+.progress {
+  height: 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.progress .skill .val {
+  float: right;
+  font-style: normal;
+  margin: 0 20px 0 0;
+}
+
+.progress-bar {
+  text-align: left;
+  border-radius: 20px;
+  transition-duration: 3s;
+  background: rgb(255, 188, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 188, 0, 1) 0%,
+    rgba(255, 220, 30, 1) 100%
+  );
+}
+
+/* ~~~~~ CERTIFICATION SECTION STYLE~~~~~ */
+
+#certification {
+  padding: 7% 15%;
+  background-color:  rgb(240, 240, 240);
+}
+
+#certification img {
+  box-shadow: 4px 4px 10px #383838b2;
+}
+
+.nav-pills .nav-link {
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  margin: 4rem 1.5rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: 2px solid
+    linear-gradient(135deg, rgba(255, 188, 0, 1) 0%, rgba(255, 220, 30, 1) 100%);
+}
+.nav-link.active.certi-icon {
+  background: rgb(255, 188, 0);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 188, 0, 1) 0%,
+    rgba(255, 220, 30, 1) 100%
+  );
+}
+
+
+/* ~~~~~ CONTACT ME SECTION STYLE~~~~~ */
+
+#contact {
+  background-color: rgb(156, 156, 156);
+  padding: 7% 13%;
+  text-align: center;
+}
+#contact h5 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.contact-container {
+  box-shadow: 0 0 20px rgba(88, 88, 88, 0.452);
+  margin-top: 40px;
+}
+#contact .address-box {
+  text-align: left;
+  padding: 8% 6% 5%;
+}
+
+.address-box h6 {
+  font-weight: 700;
+}
+#contact .contact-box {
+  text-align: left;
+  padding: 5% 6%;
+}
+.contact-box label{
+  font-family:'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.sub-btn {
+  border: 0;
+}
+
+.address-line {
+  margin-bottom: 1.5rem;
+}
+
+/* ~~~~~ FOOTER SECTION STYLE~~~~~ */
+
+#footer {
+  padding: 4% 15% 1%;
+  text-align: center;
+  background-color:#1b1b1b;
+}
+
+.footer-icon {
+  margin: 0 1.5rem 3rem;
+  color: white;
+}
+
+#footer p {
+ font-size: 0.8rem;
+ color: white;
+}
+
+
+@media (max-width: 1223px) {
+  .navbar {
+    padding: 3% 8%;
+  }
+  #title {
+    padding: 3% 8%;
+  }
+  #title h1 {
+    font-size: 2rem;
+  }
+  .profile-photo {
+    width: 20rem;
+  }
+  .profilePhotoContainer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 826px) {
+  .button {
+    margin-right: 1rem;
+  }
+  .profile-photo {
+    width: 17rem;
+  }
+  .btn {
+    padding: 7px 10px;
+  }
+}
+
+@media (max-width: 766px) {
+  #title {
+    text-align: center;
+  }
+  #title h1{
+    font-size: 2.5rem;
+  }
+  .profilePhotoContainer {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .profile-photo {
+    width: 25rem;
+  }
+  .wrapper{
+    text-align: left;
+  }
+}
+
+@media (max-width: 584px) {
+  .navbar {
+    padding: 3% 6%;
+  }
+  #title h1{
+    font-size: 2rem;
+  }
+  .btn {
+    padding: 5px 8px;
+    font-size: 1.1rem;
+  }
+  
+}
