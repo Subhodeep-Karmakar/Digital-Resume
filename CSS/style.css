@@ -170,7 +170,7 @@ p {
 #about {
   padding: 7% 12%;
   text-align: center;
-  background-color: rgb(240, 240, 240);
+  background-color: #f0f0f0;
 }
 
 .about-box {
@@ -257,7 +257,7 @@ p {
   width: 5rem;
   text-align: center;
   margin: 4rem 1.5rem;
-  padding: 1rem;
+  padding: 0.7rem 0.4rem;
   border-radius: 1.5rem;
   border: 2px solid
     linear-gradient(135deg, rgba(255, 188, 0, 1) 0%, rgba(255, 220, 30, 1) 100%);
@@ -271,11 +271,51 @@ p {
   );
 }
 
+/* ~~~~~ EXPERIENCE SECTION STYLE~~~~~ */
 
+#experience {
+  background-color: #1b1b1b;
+  padding: 7% 10%;
+}
+
+#experience h5  {
+  text-align: center;
+  color: #fab915;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+#experience h4  {
+  font-size: 1rem;
+  text-align: center;
+  color: #fab915;
+}
+
+#experience p {
+  font-weight: 300;
+  color: white;
+}
+
+.training-box {
+  margin: 10% 0 0;
+  padding: 8% 0;
+  box-shadow: 0 0 20px rgba(88, 88, 88, 0.452);;
+}
+.training-box-right{
+  padding: 0 40px;
+}
+
+.training-box-left {
+  padding-top: 1.8rem;
+}
+
+.education-heading {
+  margin-top: 10%;
+}
 /* ~~~~~ CONTACT ME SECTION STYLE~~~~~ */
 
 #contact {
-  background-color: rgb(156, 156, 156);
+  background-color: #f0f0f0;
   padding: 7% 13%;
   text-align: center;
 }
@@ -333,6 +373,7 @@ p {
  color: white;
 }
 
+/* ~~~~~ MEDIA QUERY~~~~~ */
 
 @media (max-width: 1223px) {
   .navbar {
@@ -376,6 +417,7 @@ p {
     margin-bottom: 2rem;
   }
   .profile-photo {
+    
     width: 25rem;
   }
   .wrapper{
@@ -393,6 +435,13 @@ p {
   .btn {
     padding: 5px 8px;
     font-size: 1.1rem;
+  }
+  .footer-icon {
+    margin: 2rem 1rem 3rem;
+  }
+  .profile-photo {
+    
+    width: 20rem;
   }
   
 }
